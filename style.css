@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: aliceblue;
+    color: black;
+    margin-bottom: 60px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    background-color: #f9f9f9;
+    position: relative;
+    height: auto;
+}
+
+#navigation-bar {
+    display: flex; /* Gör navigationen till en flexbox */
+    align-items: center; /* Centrerar länkarna vertikalt */
+    justify-content: space-between; /* Jämnt utrymme mellan länkar */
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 50%; /* Ge plats till navigeringen */
+}
+
+#navigation-bar a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+#navigation-bar li{
+    list-style: none;
+    padding: 0 20px;
+}
+
+#navigation-bar li a:hover{
+    color: hsl(191, 67%, 77%);
+}
+
+#big-picture {
+    background-image: url('miffy-back.jpg');
+    width: 100%;
+    height: 100vh; /* Fyll hela höjden på skärmen */
+    background-size: contain; /* Bilden skalas så att den inte klipps bort */
+    background-position: center center; /* Centrerar bilden både horisontellt och vertikalt */
+    background-repeat: no-repeat; /* Förhindrar att bilden upprepas */
+    
+}
+
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+}
+
+header h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 8px;
+    background-color: #ffff;
+    text-align: center;
+}
+
+.highlight {
+    color: red; 
+}
+
+.Welcome_color {
+    color: hwb(197 57% 12% / 0.78);
+}
+
+#miffy_plush {
+    float: left;  
+    margin-right: 20px;  
+    width: 200px;  
+}
+
+#miffy_lamp {
+    float: right;  
+    margin-right: 20px;  
+    width: 200px;  
+}
+
+section h3 {
+    margin-top: 0;
+    padding: 0;
+}
+
+
+body.light-theme {
+    background-color: white;
+    color: black;
+
+}
+
+body.dark-theme {
+    background-color: #1e1e1e;
+    color: #f4f4f9;
+
+}
