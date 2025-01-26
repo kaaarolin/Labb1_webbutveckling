@@ -1,10 +1,10 @@
 body {
     margin: 0;
+    padding-bottom: 60px; /* Bytt från margin-bottom */
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     background-color: aliceblue;
     color: black;
-    margin-bottom: 60px;
 }
 
 #header {
@@ -15,18 +15,15 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     background-color: #f9f9f9;
     position: relative;
-    height: auto;
 }
 
 #navigation-bar {
-    display: flex; /* Gör navigationen till en flexbox */
-    align-items: center; /* Centrerar länkarna vertikalt */
-    justify-content: space-between; /* Jämnt utrymme mellan länkar */
+    display: flex; 
+    align-items: center; 
     gap: 20px;
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 50%; /* Ge plats till navigeringen */
 }
 
 #navigation-bar a {
@@ -37,58 +34,67 @@ body {
     transition: color 0.3s ease;
 }
 
-#navigation-bar li{
+#navigation-bar li {
     list-style: none;
     padding: 0 20px;
 }
 
-#navigation-bar li a:hover{
+#navigation-bar li a:hover {
     color: hsl(191, 67%, 77%);
 }
 
+/* Bakgrundsbild */
 #big-picture {
-    background-image: url('miffy-back.jpg');
-    width: 100%;
-    height: 100vh; /* Fyll hela höjden på skärmen */
-    background-size: contain; /* Bilden skalas så att den inte klipps bort */
-    background-position: center center; /* Centrerar bilden både horisontellt och vertikalt */
-    background-repeat: no-repeat; /* Förhindrar att bilden upprepas */
-    
+    background-image: url('miffy-back.jpg'); /* Se till att byta ut 'din-bild.jpg' till din faktiska bakgrundsbild */
+    background-size: contain;  /* Visar hela bilden utan att den beskärs */
+    background-repeat: no-repeat; /* Förhindrar upprepning */
+    background-position: center; /* Centrerar bilden */
+    background-attachment: fixed; /* Gör att bilden stannar vid scrollning */
+    height: 100vh; /* Anpassar sektionens höjd */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 
-header h1 {
+/* Rubriker */
+#header h1, #header h2 {
     margin: 0;
     padding: 0;
+}
+
+#header h1 {
     font-size: 2.5em;
 }
 
-header h2 {
-    margin: 0;
-    padding: 0;
+#header h2 {
     font-size: 1.5em;
     font-weight: normal;
     text-align: center;
 }
 
-
+/* Sektioner */
 section {
     margin-bottom: 20px;
     padding: 15px;
-    border: 1px solid hsl(0, 0%, 100%);
+    border: 1px solid #fff;
     border-radius: 8px;
     background-color: #ffff;
     text-align: center;
 }
 
+/* Färgändringar */
 .highlight {
     color: red; 
 }
 
 .Welcome_color {
-    color: hwb(197 57% 12% / 0.78);
+    color: rgba(52, 152, 219, 0.78); /* Bytt från hwb() */
 }
 
+/* Produktbilder */
 #miffy_plush {
     float: left;  
     margin-right: 20px;  
@@ -98,23 +104,60 @@ section {
 #miffy_lamp {
     float: right;  
     margin-right: 20px;  
-    width: 200px;  
+    width: 100px; /* Minskad storlek */
 }
 
-section h3 {
-    margin-top: 0;
-    padding: 0;
+/* Alla produktbilder */
+.product img {
+    width: 150px;
+    height: auto;
 }
 
+/* Om sidan */
+#page-header.about-header {
+    background-image: url("miffy_about.jpg");
+}
 
+.bigText {
+    color: rgba(52, 152, 219, 0.78); 
+}
+
+#about-head {
+    display: flex;
+    align-items: center;
+}
+
+#about-head img {
+    width: 50%;
+    height: auto;
+}
+
+#contacts {
+    font-family: "sans-serif", sans-serif; 
+    font-size: 16px;
+    color: hsl(191, 67%, 77%);
+}
+
+/* Dark Mode */
 body.light-theme {
     background-color: white;
     color: black;
-
 }
 
 body.dark-theme {
     background-color: #1e1e1e;
     color: #f4f4f9;
-
 }
+
+
+#site-footer {
+    background-color: hwb(344 88% 2%);   /* Bakgrundsfärg */
+    padding: 20px;              /* Utrymme runtom */
+    text-align: center;         /* Centrera innehållet */
+    color: #333;                /* Textfärg */
+    border-top: 1px solid #ddd; /* Tunn linje överst */
+    font-size: 14px;            /* Justera textstorlek */
+}
+
+
+
